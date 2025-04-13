@@ -1,0 +1,58 @@
+/* styling for the review page */
+.section {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .tutor-info h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  
+  .subject {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  
+  .meta {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+  }
+  
+  .review {
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  .review:first-child {
+    border-top: none;
+  }
+  
+  ion-item {
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+    --padding-start: 0;
+    margin-bottom: 12px;
+  }
+  
+  ion-inputs, ion-textarea {
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 10px;
+    --background: #fff;
+  }
+  
+  ion-buttons {
+    margin-top: 8px;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="tutor">{{ tutor.name }}'s Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']">Home</ion-button>
+      <ion-button [routerLink]="['/task-posting']">Task Posting</ion-button>
+      <ion-button [routerLink]="['/chat']">Chat</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="tutor" class="ion-padding">
+
+  <!-- tutor Info -->
+  <div class="section tutor-info">
+    <h2>{{ tutor.name }} <ion-icon style="margin-bottom: -2.6px;" *ngIf="tutor.verified" name="checkmark-circle" color="success"></ion-icon></h2>
+    <p class="subject">{{ tutor.subject }}</p>
+    <p>{{ tutor.email }}</p>
+    <p class="meta">Role: {{ tutor.role }} | UID: {{ tutor.uid }}</p>
+  </div>
+
+  <!-- reviews -->
+  <div class="section">
+    <h3>Reviews</h3>
+    <div *ngIf="tutor.reviews && tutor.reviews.length > 0; else noReviews">
+      <div class="review" *ngFor="let review of tutor.reviews; let i = index">
+        <p><strong>{{ review.reviewer }}</strong> – Rating: {{ review.rating }}</p>
+        <p>{{ review.text }}</p>
+      </div>
+    </div>
+    <ng-template #noReviews>
+      <p class="meta">No reviews yet.</p>
+    </ng-template>
+  </div>
+
+  <!-- leave Review -->
+  <div class="section">
+    <h3>Leave a Review</h3>
+
+    <ion-item lines="none">
+      <ion-label style="margin-bottom: 10px;" position="stacked">Rating (1–5)</ion-label>
+      <ion-input type="number" [(ngModel)]="rating" min="1" max="5"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label style="margin-bottom: 10px;" position="stacked">Comment</ion-label>
+      <ion-textarea [(ngModel)]="reviewText"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="block" size="small" fill="outline" (click)="submitReview()">
+      Submit
+    </ion-button>
+  </div>
+
+</ion-content>

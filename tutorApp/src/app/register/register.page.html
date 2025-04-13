@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']">Home</ion-button>
+      <ion-button [routerLink]="['/login']">Login</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onRegister()">
+
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input [(ngModel)]="userName" name="username" type="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Role</ion-label>
+      <ion-select [(ngModel)]="selectedRole" name="role" required>
+        <ion-select-option value="Student">Student</ion-select-option>
+        <ion-select-option value="Tutor">Tutor</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+      <!-- Conditionally display the subject input if the role is Tutor -->
+      <ion-item *ngIf="selectedRole === 'Tutor'">
+        <ion-label position="floating">Subject Name</ion-label>
+        <ion-input [(ngModel)]="subjectName" name="subject" required></ion-input>
+      </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!email || !password">Register</ion-button>
+  </form>
+</ion-content>

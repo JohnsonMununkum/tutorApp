@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./review/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./review/review.module').then(m => m.TabsPageModule)
   },
   {
     path: 'task-posting',
