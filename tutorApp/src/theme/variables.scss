@@ -1,2 +1,76 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+/* primary app color */
+:root {
+    --ion-color-primary: #90EE90;  
+    --ion-color-primary-rgb: 144, 238, 144;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0, 0, 0;
+    
+    /* secondary color */
+    --ion-color-secondary: #70da1a; 
+    --ion-color-secondary-rgb: 255, 215, 0;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0, 0, 0;
+    
+    /* tertiary color */
+    --ion-color-tertiary: #32CD32;  
+    --ion-color-tertiary-rgb: 50, 205, 50;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+    
+    /* corrct color */
+    --ion-color-success: #28a745;  
+    --ion-color-success-rgb: 40, 167, 69;
+    --ion-color-success-contrast: #ffffff;
+    --ion-color-success-contrast-rgb: 255, 255, 255;
+  
+    /* warning color */
+    --ion-color-warning: #FF8C00;  
+    --ion-color-warning-rgb: 255, 140, 0;
+    --ion-color-warning-contrast: #ffffff;
+    --ion-color-warning-contrast-rgb: 255, 255, 255;
+  
+    /* error color */
+    --ion-color-danger: #FF4500;  
+    --ion-color-danger-rgb: 255, 69, 0;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
+  
+    /* dsrk color */
+    --ion-color-dark: #2F4F4F;  
+    --ion-color-dark-rgb: 47, 79, 79;
+    --ion-color-dark-contrast: #ffffff;
+    --ion-color-dark-contrast-rgb: 255, 255, 255;
+  
+    /* medium color */
+    --ion-color-medium: #7B68EE;  
+    --ion-color-medium-rgb: 123, 104, 238;
+    --ion-color-medium-contrast: #ffffff;
+    --ion-color-medium-contrast-rgb: 255, 255, 255;
+  
+    /* light color */
+    --ion-color-light: #F0E68C;  
+    --ion-color-light-rgb: 240, 230, 140;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0, 0, 0;
+  
+    /* ui elements */
+    --ion-background-color: #ffffff;
+    --ion-text-color: #333333;
+    --ion-toolbar-background: #90EE90;  
+    --ion-toolbar-color: #000000;
+  
+    /* button colors */
+    --ion-button-background: #FFD700; 
+    --ion-button-color: #ffffff;
+    --ion-button-border-radius: 12px;
+  
+    /* form elements */
+    --ion-input-background: #F0E68C;  
+    --ion-input-color: #ffffff;
+    --ion-input-placeholder-color: #ffffff;
+    
+    /* card */
+    --ion-card-background: #acec98;  
+    --ion-card-header-background: #90EE90;  
+    --ion-card-header-color: #ffffff;
+}
