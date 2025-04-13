@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chat</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']">Home</ion-button>
+      <ion-button [routerLink]="['/task-posting']">Task Posting</ion-button>
+      <ion-button *ngIf="!isLoggedIn" [routerLink]="['/login']">Login</ion-button>
+      <ion-button *ngIf="!isLoggedIn" [routerLink]="['/register']">Register</ion-button>
+      <ion-button *ngIf="isLoggedIn" (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="messages" *ngFor="let msg of messages">
+    <ion-item>
+      <ion-label>
+        <strong>{{ msg.userName }}</strong>: {{ msg.text }}
+      </ion-label>
+      <ion-note>{{ msg.timestamp | date: 'short' }}</ion-note>
+    </ion-item>
+  </div>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-input [(ngModel)]="message" placeholder="Type a message"></ion-input>
+      <ion-button (click)="sendMessage()">Send</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
