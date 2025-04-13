@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tutors</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']">Home</ion-button>
+      <ion-button [routerLink]="['/task-posting']">Task Posting</ion-button>
+      <ion-button [routerLink]="['/chat']">Chat</ion-button>
+      <ion-button *ngIf="!isLoggedIn" [routerLink]="['/login']">Login</ion-button>
+      <ion-button *ngIf="!isLoggedIn" [routerLink]="['/register']">Register</ion-button>
+      <ion-button *ngIf="isLoggedIn && !isVerified" [routerLink]="['/verify']">Verify</ion-button>
+      <ion-button *ngIf="isLoggedIn" (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="tutor-list">
+    <ion-item *ngFor="let tutor of tutors" lines="full" (click)="onProfileTap(tutor)" routerLink="">
+      <ion-label>
+        <h3 class="tutor-name">{{ tutor.name }} <ion-icon style="margin-bottom: -2.6px;" *ngIf="tutor.verified" name="checkmark-circle" color="success"></ion-icon></h3>
+        <p class="tutor-subject">({{ tutor.subject }})</p>
+       
+
+        <!--shows only the first review  -->
+        <ng-container *ngIf="tutor.reviews && tutor.reviews.length > 0; else noReviews">
+          <ion-text class="review">
+            <p><strong>Rating:</strong> {{ tutor.reviews[0].rating }}</p>
+            <p><strong>Comment:</strong> {{ tutor.reviews[0].text }}</p>
+          </ion-text>
+        </ng-container>
+
+      
+        <!-- Nn reviews -->
+        <ng-template #noReviews>
+          <ion-text class="no-reviews">
+            <p>No reviews available.</p>
+          </ion-text>
+        </ng-template>
+
+
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,105 @@
+/* styling for the home page */
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  
+  .tutor-card {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .tutor-card img {
+    max-width: 100%;
+  }
+  
+  .tutor-card:hover {
+    cursor: pointer;
+  }
+  
+  /* allow screen to rotate  */
+  .rotate-screen {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+  
+  /* visibility */
+  .tutor-card.hidden {
+    opacity: 0.5;
+  }
+  
+  
+  .tutor-list {
+    padding: 0;
+  }
+  
+  .tutor-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .tutor-subject {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .tutor-email {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+  }
+  
+  .review-list {
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  ion-item {
+    --background: transparent;
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+  }
+  
+  .review-list ion-item {
+    --background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .review-list ion-label {
+    font-size: 14px;
+  }
+  
+  .no-reviews p {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
