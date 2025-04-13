@@ -8,6 +8,7 @@ import { User } from '../models/user.model';
 import { Review } from '../models/review.model';
 import { PushNotificationsService } from '../services/push-notifications.service';
 import { ToastService } from '../services/toast.service';
+//javascript library that add touch jesture to the home page
 import 'hammerjs';
 import { AuthService } from '../services/auth.service';
 
