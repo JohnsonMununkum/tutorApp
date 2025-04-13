@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+//routing & verfiy page
 import { Routes, RouterModule } from '@angular/router';
 
 import { VerifyPage } from './verify.page';

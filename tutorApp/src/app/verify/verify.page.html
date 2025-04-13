@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>verify</ion-title>
+    <ion-title>Verify User</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">verify</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="captureID()">
+    Take Photo of Your ID
+  </ion-button>
+
+  <img
+  *ngIf="photoUrl"
+  [src]="photoUrl"
+  style="width: 100%; max-height: 500px; object-fit: cover; margin-top: 15px;"/>
+
+
+  <ion-button expand="block" color="success" (click)="uploadID()" [disabled]="!photoUrl || uploading">
+    Upload for Verification
+  </ion-button>
+
+  <p *ngIf="message">{{ message }}</p>
 </ion-content>
