@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component, Injector, OnInit, runInInjectionContext } from '@angular/core';
 //import the tutorservice, tutor, router, authentication, user, review , pushnotifications
-import { TutorService } from '../services/tutor.service'; 
-import { Tutor } from '../models/tutor.model'; 
+import { TutorService } from '../services/tutor.service';
+import { Tutor } from '../models/tutor.model';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { User } from '../models/user.model';

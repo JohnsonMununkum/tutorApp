@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/compat/firestore'; 
 import { map, Observable } from 'rxjs';
 import { User } from '../models/user.model';
-import { ToastService } from './toast.service';
 import { Tutor } from '../models/tutor.model';
+import { ToastService } from './toast.service';
 
 @Injectable({
   providedIn: 'root',
